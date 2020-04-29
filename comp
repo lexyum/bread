@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -n "bprinttest: "
+nasm -f elf64 -gdwarf bprint.s -o bprint.o
+nasm -f elf64 -gdwarf bprinttest.s -o bprinttest.o
+ld -m elf_x86_64 bprinttest.o bprint.o -o bprinttest
+echo "done"
+
+echo -n "lbprinttest: "
+nasm -f elf64 lbprint.s -o lbprint.o
+nasm -f elf64 lbprinttest.s -o lbprinttest.o
+ld -m elf_x86_64 lbprinttest.o lbprint.o -o lbprinttest
+echo "done"

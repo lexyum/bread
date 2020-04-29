@@ -1,0 +1,5 @@
+# print functions
+
+Buffering print functions bprints, lbprints, bprintc, lbprintc, for slightly easier output without linking against the C standard library. No error checking, plenty of scope for improvement
+
+
